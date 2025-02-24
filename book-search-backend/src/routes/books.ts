@@ -16,7 +16,7 @@ const searchBooks: RequestHandler<object, { error?: string; items?: Record<strin
     const response = await axios.get(GOOGLE_BOOKS_API as string, {
       params: {
         q: genre ? `${query}+subject:${genre}` : query,
-        maxResults: 2,
+        maxResults: 5,
       },
     });
 
